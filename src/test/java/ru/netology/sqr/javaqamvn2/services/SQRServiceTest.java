@@ -11,9 +11,9 @@ public class SQRServiceTest {
 
     @CsvFileSource(files = "src/test/resources/rangeLimits.csv")
 
-    public void test(int rangeLimitMin, int rangeLimitMax, int expected) {
+    public void test() {
         SQRService service = new SQRService();
-        int numberOfSquares = service.SquareRootsCounter(300, 500);
+        int numberOfSquares = service.squareRootsCounter(300, 500);
 
         Assertions.assertEquals(5, numberOfSquares);
     }
